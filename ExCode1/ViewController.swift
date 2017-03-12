@@ -10,14 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var text1: UITextField!
+    
+    @IBOutlet weak var text2: UITextField!
+    
     @IBOutlet weak var theLabel: UILabel!
-     var tapCount = 0
+    
     @IBAction func btnPressed(_ sender: Any) {
-        
-        tapCount = tapCount + 1
-        if tapCount >= 10 {
-            theLabel.text = ("You pressed 10 times!")
-        }
+        theLabel.text = "Answer:\(Double(text1.text!)! + Double(text2.text!)!)"
     }
     @IBAction func coolBTN(_ sender: Any) {
         theLabel.text = "Buttons are Cool!"
